@@ -1,4 +1,5 @@
 # Retail-Data-Analytics-Project
+
 Omnichannel Retail Sales and Inventory Analytics Dashboard using SQL, Python, and Power BI
 
 # Retail Data Analytics Project
@@ -20,26 +21,39 @@ This project focuses on cleaning and analyzing retail sales data using SQL Serve
 * Fixed data type issues (converted Sales & Profit from text to FLOAT)
 * Validated data consistency
 
+## SQL Business Analysis
+
+Performed SQL-based analysis to extract key business insights:
+
+* Total Revenue and Profit calculation
+* Category-wise performance analysis
+* Region-wise sales distribution
+* Top-performing products identification
+* Monthly sales trend analysis
+* Identification of loss-making products
+
 ## Tools Used
 
 * SQL Server (SSMS)
 * GitHub (Version Control)
+* Power BI (Upcoming)
+* Python (Upcoming)
 
 ## Project Structure
 
 * `data/` → Raw dataset
-* `sql/` → SQL queries for cleaning
+* `sql/` → SQL queries for cleaning & analysis
 * `dashboard/` → (Upcoming Power BI dashboards)
 * `python/` → (Upcoming analysis)
 
 ## Status
 
 ✔ Data Cleaning Completed
-🚀 Business Analysis & Dashboarding Next
+✔ SQL Analysis Completed
+🚀 Dashboarding (Power BI) Next
 
 ## Key Learning
 
 * Handling real-world dirty data
 * Data type correction in SQL
-* Writing structured queries for analysis
-
+* Writing structured queries for business analysis
