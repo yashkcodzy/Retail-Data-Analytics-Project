@@ -13,8 +13,77 @@ FROM [dbo].[DA Project-1 dataset (Omni Channel)];
 ALTER TABLE [dbo].[DA Project-1 dataset (Omni Channel)]
 ALTER COLUMN Sales FLOAT;
 
-ALTER TABLE [dbo].[DA Project-1 dataset (Omni Channel)]
+ALTER TABLE [dbo].[DA Project-1 dataset (Omni Channel)] 
 ALTER COLUMN Profit FLOAT;
+
+
+
+-- Total Revenue
+SELECT SUM(Sales) AS total_revenue
+FROM [dbo].[DA Project-1 dataset (Omni Channel)];
+
+-- Total Profit
+SELECT SUM(Profit) AS total_profit
+FROM [dbo].[DA Project-1 dataset (Omni Channel)];
+
+-- Category Wise Performance
+SELECT Category,
+       SUM(Sales) AS revenue,
+       SUM(Profit) AS profit
+FROM [dbo].[DA Project-1 dataset (Omni Channel)]
+GROUP BY Category
+ORDER BY revenue DESC;
+
+-- Region Analysis
+SELECT Region,
+       SUM(Sales) AS revenue,
+       SUM(Profit) AS profit
+FROM [dbo].[DA Project-1 dataset (Omni Channel)]
+GROUP BY Region
+ORDER BY revenue DESC;
+
+-- Top 10 Products (keep but optional)
+SELECT TOP 10 Product_Name,
+       SUM(Sales) AS revenue
+FROM [dbo].[DA Project-1 dataset (Omni Channel)]
+GROUP BY Product_Name
+ORDER BY revenue DESC;
+
+-- Time Analysis 
+SELECT FORMAT(Order_Date, 'yyyy') AS year,
+       SUM(Sales) AS revenue
+FROM [dbo].[DA Project-1 dataset (Omni Channel)]
+GROUP BY FORMAT(Order_Date, 'yyyy')
+ORDER BY year;
+
+-- Sub-Category Analysis
+SELECT Sub_Category,
+       SUM(Sales) AS revenue
+FROM [dbo].[DA Project-1 dataset (Omni Channel)]
+GROUP BY Sub_Category
+ORDER BY revenue DESC;
+
+-- Loss Making Products (optional)
+SELECT Product_Name,
+       SUM(Profit) AS total_profit
+FROM [dbo].[DA Project-1 dataset (Omni Channel)]
+GROUP BY Product_Name
+HAVING SUM(Profit) < 0
+ORDER BY total_profit;
+
+-- Segment Analysis
+SELECT Segment,
+       SUM(Sales) AS revenue
+FROM [dbo].[DA Project-1 dataset (Omni Channel)]
+GROUP BY Segment;
+
+-- Monthly Trend 
+SELECT 
+    FORMAT(Order_Date, 'yyyy-MM') AS month,
+    SUM(Sales) AS revenue
+FROM [dbo].[DA Project-1 dataset (Omni Channel)]
+GROUP BY FORMAT(Order_Date, 'yyyy-MM')
+ORDER BY month;
 
 -- BASIC METRICS
 
