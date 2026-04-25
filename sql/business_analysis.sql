@@ -1,117 +1,43 @@
---Total Revenue
+-- DATABASE 
+-- 
+CREATE DATABASE omni_channel_db;
 
-SELECT SUM(Sales) AS total_revenue
-FROM [dbo].[Sample - Superstore];
+-- VIEW DATA
 
---Total Profit
-
-SELECT SUM(Profit) AS total_profit
-FROM [dbo].[Sample - Superstore];
-
---Category Wise Performance
-
-SELECT Category,
-       SUM(Sales) AS revenue,
-       SUM(Profit) AS profit
-FROM [dbo].[Sample - Superstore]
-GROUP BY Category
-ORDER BY revenue DESC;
-
-
---Region Analysis
-
-SELECT Region,
-       SUM(Sales) AS revenue,
-       SUM(Profit) AS profit
-FROM [dbo].[Sample - Superstore]
-GROUP BY Region
-ORDER BY revenue DESC;
-
-
--- Top 10 Products
-
-SELECT TOP 10 Product_Name,
-       SUM(Sales) AS revenue
-FROM [dbo].[Sample - Superstore]
-GROUP BY Product_Name
-ORDER BY revenue DESC;
-
-
--- Time Analysis
-
-SELECT YEAR(Order_Date) AS year,
-       SUM(Sales) AS revenue
-FROM [dbo].[Sample - Superstore]
-GROUP BY YEAR(Order_Date)
-ORDER BY year;
-
-
--- SUB-CATEGORY ANALYSIS
-
-SELECT Sub_Category,
-       SUM(Sales) AS revenue
-FROM [dbo].[Sample - Superstore]
-GROUP BY Sub_Category
-ORDER BY revenue DESC;
-
-
--- LOSS MAKING PRODUCTS
-
-SELECT Product_Name,
-       SUM(Profit) AS total_profit
-FROM [dbo].[Sample - Superstore]
-GROUP BY Product_Name
-HAVING SUM(Profit) < 0
-ORDER BY total_profit;
-
-
--- SEGMENT ANALYSIS
-
-SELECT Segment,
-       SUM(Sales) AS revenue
-FROM [dbo].[Sample - Superstore]
-GROUP BY Segment;
-
-
--- MONTHLY TREND
-
-SELECT 
-    MONTH(Order_Date) AS month,
-    SUM(Sales) AS revenue
-FROM [dbo].[Sample - Superstore]
-GROUP BY MONTH(Order_Date)
-ORDER BY month;
+SELECT * 
+FROM [dbo].[DA Project-1 dataset (Omni Channel)];
 
 -- 
-
-create database omni_channel_db;
-select * from [dbo].[DA Project-1 dataset (Omni Channel)];
-
--- change datatype from nvarchar to float
+-- DATA TYPE FIX
+-- 
 ALTER TABLE [dbo].[DA Project-1 dataset (Omni Channel)]
 ALTER COLUMN Sales FLOAT;
 
 ALTER TABLE [dbo].[DA Project-1 dataset (Omni Channel)]
 ALTER COLUMN Profit FLOAT;
 
---Total orders
+-- BASIC METRICS
+
+-- Total Orders
 SELECT COUNT(DISTINCT Order_ID) AS total_orders
 FROM [dbo].[DA Project-1 dataset (Omni Channel)];
 
--- tota revenue
+-- Total Revenue
 SELECT SUM(Sales) AS total_revenue
 FROM [dbo].[DA Project-1 dataset (Omni Channel)];
 
--- total profit
+-- Total Profit
 SELECT SUM(Profit) AS total_profit
 FROM [dbo].[DA Project-1 dataset (Omni Channel)];
 
--- average order value
+-- Average Order Value
 SELECT 
     SUM(Sales) / COUNT(DISTINCT Order_ID) AS avg_order_value
 FROM [dbo].[DA Project-1 dataset (Omni Channel)];
 
---category analysis
+
+-- CATEGORY ANALYSIS
+
 SELECT 
     Category,
     SUM(Sales) AS revenue,
@@ -120,7 +46,8 @@ FROM [dbo].[DA Project-1 dataset (Omni Channel)]
 GROUP BY Category
 ORDER BY revenue DESC;
 
--- sub category analysis
+-- SUB-CATEGORY ANALYSIS
+
 SELECT 
     Sub_Category,
     SUM(Sales) AS revenue,
@@ -129,7 +56,9 @@ FROM [dbo].[DA Project-1 dataset (Omni Channel)]
 GROUP BY Sub_Category
 ORDER BY revenue DESC;
 
--- gographical analysis
+
+-- GEOGRAPHIC ANALYSIS
+
 SELECT 
     Region,
     SUM(Sales) AS revenue,
@@ -138,32 +67,41 @@ FROM [dbo].[DA Project-1 dataset (Omni Channel)]
 GROUP BY Region
 ORDER BY revenue DESC;
 
---time bases analysis 
+
+-- TIME-BASED ANALYSIS 
+
 SELECT 
-    YEAR(Order_Date) AS order_year,
+    FORMAT(Order_Date, 'yyyy-MM') AS month,
     SUM(Sales) AS revenue
 FROM [dbo].[DA Project-1 dataset (Omni Channel)]
-GROUP BY YEAR(Order_Date)
-ORDER BY order_year;
+GROUP BY FORMAT(Order_Date, 'yyyy-MM')
+ORDER BY month;
 
--- discount impact
+
+-- DISCOUNT IMPACT 
+
 SELECT 
     Discount,
+    COUNT(*) AS total_orders,
     SUM(Sales) AS revenue,
     SUM(Profit) AS profit
 FROM [dbo].[DA Project-1 dataset (Omni Channel)]
 GROUP BY Discount
 ORDER BY Discount;
 
---profit margin by category
+
+-- PROFIT MARGIN 
+
 SELECT 
     Category,
-    SUM(Profit) / SUM(Sales) * 100 AS profit_margin_percent
+    SUM(Profit) / NULLIF(SUM(Sales), 0) * 100 AS profit_margin_percent
 FROM [dbo].[DA Project-1 dataset (Omni Channel)]
 GROUP BY Category
 ORDER BY profit_margin_percent DESC;
 
--- channel analysis
+
+-- CHANNEL ANALYSIS
+
 SELECT 
     Ship_Mode,
     SUM(Sales) AS revenue,
@@ -173,5 +111,12 @@ GROUP BY Ship_Mode
 ORDER BY revenue DESC;
 
 
+-- SEGMENT ANALYSIS 
 
--- 
+SELECT 
+    Segment,
+    SUM(Sales) AS revenue,
+    SUM(Profit) AS profit
+FROM [dbo].[DA Project-1 dataset (Omni Channel)]
+GROUP BY Segment
+ORDER BY revenue DESC;
