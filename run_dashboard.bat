@@ -1,6 +1,0 @@
-@echo off
-echo Installing dependencies...
-pip install streamlit pandas plotly
-echo Starting the dashboard...
-streamlit run dashboard.py
-pause
