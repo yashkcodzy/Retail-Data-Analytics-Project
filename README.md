@@ -1,3 +1,13 @@
+![SQL](https://img.shields.io/badge/SQL-SSMS-blue)
+![Python](https://img.shields.io/badge/Python-Analytics-yellow)
+![PowerBI](https://img.shields.io/badge/PowerBI-Dashboard-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![GitHub](https://img.shields.io/badge/GitHub-Project-black)![SQL](https://img.shields.io/badge/SQL-SSMS-blue)
+![Python](https://img.shields.io/badge/Python-Analytics-yellow)
+![PowerBI](https://img.shields.io/badge/PowerBI-Dashboard-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![GitHub](https://img.shields.io/badge/GitHub-Project-black)
+
 # Retail Data Analytics Project
 
 ## Overview
