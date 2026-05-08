@@ -14,6 +14,23 @@ This project focuses on cleaning, analyzing, and visualizing omnichannel retail 
 - Tools Used: SQL Server, Power BI, Excel, GitHub
 
 ---
+## Tools Used
+
+- SQL Server (SSMS)
+- Python
+- Streamlit
+- Power BI
+- GitHub
+
+- ## SQL Analysis
+
+Performed advanced SQL business analysis including:
+- Revenue Analysis
+- Profit Analysis
+- Category Performance
+- Regional Analysis
+- Customer Insights
+- Monthly Trends
 
 # Data Cleaning Process
 
