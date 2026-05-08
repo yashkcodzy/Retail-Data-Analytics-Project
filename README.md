@@ -1,64 +1,78 @@
-# 🏙️ Retail Intelligence Pro: Enterprise-Grade Analytics
+Retail-Data-Analytics-Project
+Omnichannel Retail Sales and Inventory Analytics Dashboard using SQL, Python, and Power BI
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Python: 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![Streamlit: 1.25+](https://img.shields.io/badge/Streamlit-1.25+-FF4B4B.svg)
+Retail-Data-Analytics-Project
+Omnichannel Retail Sales and Inventory Analytics Dashboard using SQL, Python, and Power BI
 
-**Retail Intelligence Pro** is a strategic decision-support suite designed for high-end retail analytics. It transforms standard sales data into actionable business intelligence using advanced data science techniques.
+Overview
+This project focuses on cleaning and analyzing retail sales data using SQL Server, followed by building an interactive dashboard in Power BI to derive business insights.
 
-## 🚀 Key Strategic Modules
+Dataset
+Source: Cleaned Omni-channel Retail Dataset
+Total Orders: ~5000+
+Domain: Retail / Sales
+Data Cleaning Steps
+Checked for NULL values
+Verified duplicate records
+Fixed data type issues (converted Sales & Profit from text to FLOAT in SQL)
+Validated data consistency after import
+SQL Business Analysis
+Performed SQL-based analysis to extract key business insights:
 
-### 1. 👥 Customer Value Intelligence
-*   **RFM Segmentation**: Automatically categorizes customers into Champions, Loyal, At Risk, and Lost.
-*   **Predicted CLV**: Estimates future revenue potential for individual customer profiles.
-*   **Churn Risk Scoring**: Identifies customers likely to defect based on purchase latency.
+Total Orders, Revenue, and Profit calculation
+Average Order Value (AOV)
+Category and Sub-Category analysis
+Geographic (Region-wise) performance
+Time-based sales trends
+Discount impact on revenue and profit
+Profit margin analysis
+Channel (Ship Mode) performance analysis
+Tools Used
+SQL Server (SSMS)
+GitHub (Version Control)
+Power BI (In Progress)
+Python (Optional)
+Project Structure
+data/ → Raw & cleaned datasets
+sql/ → SQL queries (cleaning + analysis)
+dashboard/ → Power BI dashboards
+python/ → (Optional analysis)
+Status
+✔ Data Cleaning Completed ✔ SQL Analysis Completed 🚀 Power BI Dashboard In Progress
 
-### 2. 📦 Inventory Intelligence
-*   **Stockout Prediction**: Calculates "Days of Supply" based on historical sales velocity.
-*   **Restock Alerts**: Visual indicators for products at high risk of running out within 10 days.
+Key Learning
+Handling real-world data issues during SQL import
+Data type conversion and debugging in SQL
+Writing analytical SQL queries for business insights
+Translating raw data into meaningful insights
+Business Insights
+1. Overall Performance (Based on overall aggregation)
+The total revenue generated is approximately 2.29 million, with a total profit of around 286K from 5009 orders. The business maintains a healthy profit margin of approximately 17%, indicating efficient operations and stable profitability.
 
-### 3. 📈 Growth Dynamics
-*   **Sales Forecasting**: Implements linear trend projections for long-term revenue planning.
-*   **Sunburst Hierarchies**: Multi-level drill-down from Category to Region for deep performance auditing.
+2. Customer Behavior (Based on Average Order Value analysis)
+The average order value is approximately 458, indicating moderate customer spending per order. This suggests an opportunity to increase revenue by improving basket size through cross-selling and upselling strategies.
 
-### 4. 💰 Profit Optimization
-*   **What-If Simulator**: Real-time simulation of profit impact based on discount rate adjustments.
-*   **Pareto 80/20 Analysis**: Identifies the "Vital Few" products driving 80% of total revenue.
-*   **Market Basket Analysis**: Uncovers product associations for cross-selling and bundling strategies.
+3. Category Performance (Based on category-wise analysis)
+The Technology category generates revenue of approximately 501K, making it one of the top-performing categories. This indicates strong customer demand for technology-related products and highlights it as a key revenue driver.
 
-## 🛠️ Installation & Setup
+4. Top Product Contribution (Based on product-level revenue analysis)
+The product Canon imageCLASS 2200 Advanced Copier generates revenue of approximately 484K, making it one of the highest contributing products. This indicates a strong dependency on specific high-value products.
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/your-username/Retail-Intelligence-Pro.git
-   cd Retail-Intelligence-Pro
-   ```
+5. High Revenue Concentration (Based on revenue distribution analysis)
+A significant portion of revenue is concentrated among a few key contributors, with values such as 835K, 706K, 678K, and 484K. This indicates that a small number of segments/products contribute heavily to total revenue, following a Pareto-like distribution.
 
-2. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+6. Sub-Category / Segment Variation (Based on revenue spread)
+Revenue values such as 223K, 206K, and 94K indicate variation in performance across different sub-categories or segments. This highlights an imbalance where some segments perform significantly better than others.
 
-3. **Run the Dashboard**
-   ```bash
-   streamlit run dashboard.py
-   ```
+7. Profitability Analysis (Based on profit margin calculation)
+The overall profit margin is approximately 17.03%, indicating efficient pricing and cost management. However, further optimization in low-performing areas can improve profitability.
 
-## 📂 Project Structure
-```text
-├── data/               # Raw and processed datasets
-├── src/                # Core analytical logic
-├── docs/               # Technical documentation
-├── dashboard.py        # Main Streamlit application
-├── requirements.txt    # Dependency manifest
-└── README.md           # This file
-```
+8. Business Risk Insight (Based on revenue dependency)
+The high dependency on a few high-performing products or segments presents a potential risk. If these key contributors underperform, it could significantly impact overall business performance.
 
-## 🎨 Design System: "Eclipse Premium"
-The dashboard utilizes a custom glassmorphism design system with:
-*   **Background**: Deep Slate Linear Gradient (`#0F172A` to `#1E293B`)
-*   **Accent**: Electric Blue (`#3B82F6`)
-*   **Typography**: Inter (Modern Geometric Sans-Serif)
-
----
-*Developed by the Strategic Intelligence Unit*
+9. Business Recommendations
+Focus on expanding high-performing categories like Technology
+Reduce dependency on a few top products by diversifying revenue streams
+Improve performance of low-revenue segments
+Optimize pricing and discount strategies to further enhance profit margins
+Increase average order value through bundling and targeted promotions
