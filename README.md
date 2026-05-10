@@ -202,7 +202,7 @@ Certain shipping channels generated higher revenue, highlighting the importance 
 - Optimize discount strategies to protect profit margins
 - Increase marketing efforts in lower-performing regions
 - Promote high-value products strategically
-- Strengthen customer retention and upselling strategies
+- Strengthen customer retention and upselling strategies.
 
 ---
 
