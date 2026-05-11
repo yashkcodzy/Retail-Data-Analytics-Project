@@ -2,53 +2,65 @@
 ![Python](https://img.shields.io/badge/Python-Analytics-yellow)
 ![PowerBI](https://img.shields.io/badge/PowerBI-Dashboard-orange)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
-![GitHub](https://img.shields.io/badge/GitHub-Project-black)![SQL](https://img.shields.io/badge/SQL-SSMS-blue)
-![Python](https://img.shields.io/badge/Python-Analytics-yellow)
-![PowerBI](https://img.shields.io/badge/PowerBI-Dashboard-orange)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
 ![GitHub](https://img.shields.io/badge/GitHub-Project-black)
 
-# Retail Data Analytics Project
+# 🛒 Retail Data Analytics Project
 
-## Overview
-
-This project focuses on cleaning, analyzing, and visualizing omnichannel retail sales data using SQL Server and Power BI. The objective of this project is to generate meaningful business insights related to sales performance, profitability, customer behavior, regional trends, and operational efficiency.
+Omnichannel Retail Sales and Inventory Analytics Dashboard using SQL, Python, and Power BI.
 
 ---
 
-# Dataset Information
+# 📌 Overview
+
+This project focuses on cleaning, analyzing, and visualizing omnichannel retail sales data using SQL Server, Python, and Power BI.
+
+The objective of this project is to generate meaningful business insights related to:
+- Sales Performance
+- Profitability
+- Customer Behavior
+- Regional Trends
+- Operational Efficiency
+
+---
+
+# 📂 Dataset Information
 
 - Dataset: Omni Channel Retail Dataset
 - Domain: Retail / Sales Analytics
 - Total Records: ~10,000 rows
-- Tools Used: SQL Server, Power BI, Excel, GitHub
 
 ---
-## Tools Used
+
+# 🛠️ Tools & Technologies Used
 
 - SQL Server (SSMS)
 - Python
+- Pandas
+- NumPy
 - Streamlit
 - Power BI
-- GitHub
+- Excel
+- Git & GitHub
 
-- ## SQL Analysis
+---
 
-Performed advanced SQL business analysis including:
-- Revenue Analysis
-- Profit Analysis
-- Category Performance
-- Regional Analysis
-- Customer Insights
-- Monthly Trends
+🚀 Project Status
 
-# Data Cleaning Process
+✅ Data Cleaning Completed
 
-Data cleaning was performed before analysis to improve data quality and consistency.
+✅ SQL Analysis Completed
+
+✅ Power BI Dashboard Completed
+
+✅ GitHub Project Documentation Completed
+
+# 🧹 Data Cleaning Process
+
+Data cleaning and preprocessing were performed before analysis to improve data quality and consistency.
 
 ## Cleaning Steps Performed
 
-- Checked for NULL values
+- Checked NULL values
 - Verified duplicate records
 - Standardized column names
 - Corrected inconsistent formatting
@@ -58,7 +70,7 @@ Data cleaning was performed before analysis to improve data quality and consiste
 
 ---
 
-# SQL Business Analysis
+# 🗄️ SQL Business Analysis
 
 The following SQL analysis was performed on the cleaned dataset:
 
@@ -80,136 +92,84 @@ The following SQL analysis was performed on the cleaned dataset:
 
 ---
 
-# Tools & Technologies Used
+# 📊 Power BI Dashboard Features
 
-- SQL Server (SSMS)
-- Power BI
-- GitHub
-- Excel
-- Python (supporting preprocessing)
+The interactive Power BI dashboard includes:
 
----
-
-# Project Structure
-
-Retail-Data-Analytics-Project/
-
-├── data/ → Dataset files
-
-├── sql/ → SQL queries and analysis
-
-├── dashboard/ → Power BI dashboard files
-
-├── python/ → Supporting scripts
-
-├── docs/ → Documentation
-
-└── README.md
+- Total Sales KPI
+- Total Profit KPI
+- Total Orders KPI
+- Category Wise Sales
+- Region Wise Profit
+- Sales Trend Over Time
+- Top 10 States by Sales
+- Interactive Filters & Slicers
 
 ---
 
-# Project Status
-
-✅ Data Cleaning Completed
-
-✅ SQL Analysis Completed
-
-🚀 Power BI Dashboard In Progress
-
----
-
-# Business Insights
+# 📈 Key Business Insights
 
 ## 1. Overall Business Performance
 
-The business generated a total revenue of approximately **2.29 Million** with a total profit of around **286K**.
+- Total Revenue generated: ~2.29 Million
+- Total Profit generated: ~286K
+- Total Orders processed: 5009
+- Average Order Value: ~458
 
-The company maintains a healthy profit margin, indicating stable and profitable business operations.
+The business is operating profitably with strong revenue generation and healthy order volume.
 
 ---
 
 ## 2. Category Performance
 
-The **Technology** category emerged as the top-performing category with revenue exceeding **500K**.
-
-This indicates strong customer demand for technology-related products and higher profitability compared to other categories.
+The Technology category generated the highest revenue, indicating strong customer demand for technology-related products.
 
 ---
 
 ## 3. Top Revenue Generating Product
 
-The product **Canon imageCLASS 2200 Advanced Copier** generated the highest revenue of approximately **484K**.
-
-This product contributes significantly to total business revenue and represents a high-value product segment.
+Canon imageCLASS 2200 Advanced Copier generated the highest revenue among all products.
 
 ---
 
-## 4. Sub-Category Performance
+## 4. Regional Performance
 
-Sub-categories such as **Phones**, **Copiers**, and **Accessories** contributed major portions of total sales revenue.
-
-This shows that customers highly prefer technology-focused sub-categories.
+The Western Region generated the highest sales revenue and contributed significantly to overall business growth.
 
 ---
 
-## 5. Regional Analysis
+## 5. Profitability Analysis
 
-The **Western Region** generated the highest sales revenue among all regions.
-
-This region plays a major role in overall business growth and profitability.
+The overall profit margin is approximately 17%, reflecting healthy operational performance.
 
 ---
 
-## 6. Customer Spending Behavior
+## 6. Discount Impact Analysis
 
-The average order value is approximately **458**, indicating moderate customer spending per transaction.
-
-This creates opportunities for:
-- Upselling
-- Cross-selling
-- Bundle offers
-
-to increase overall basket value.
+Higher discounts negatively affected profitability in several cases, indicating the importance of optimized discount strategies.
 
 ---
 
-## 7. Profitability Analysis
-
-The overall profit margin is approximately **17%**, reflecting efficient operational management and profitable sales distribution.
-
----
-
-## 8. Discount Impact Analysis
-
-Higher discount levels negatively affected profitability in several cases.
-
-This suggests that excessive discounting can reduce overall business margins and should be optimized carefully.
-
----
-
-## 9. Channel / Ship Mode Analysis
-
-Different shipping modes contributed differently to revenue and profit generation.
-
-Certain shipping channels generated higher revenue, highlighting the importance of logistics and delivery preferences in customer purchasing behavior.
-
----
-
-# Business Recommendations
+# 💡 Business Recommendations
 
 - Focus more on high-performing categories like Technology
 - Improve performance of low-performing sub-categories
 - Optimize discount strategies to protect profit margins
 - Increase marketing efforts in lower-performing regions
 - Promote high-value products strategically
-- Strengthen customer retention and upselling strategies.
+- Strengthen customer retention and upselling strategies
 
 ---
 
-# Future Scope
+# 📂 Project Structure
 
-- Interactive Power BI Dashboard Development
-- Advanced KPI Tracking
-- Predictive Sales Analysis
-- Customer Segmentation
-- Trend Forecasting using Python
+```bash
+Retail-Data-Analytics-Project/
+│
+├── data/
+├── docs/
+├── python/
+├── sql/
+├── powerbi/
+├── README.md
+└── LICENSE
