@@ -88,7 +88,7 @@ st.markdown("""
 # --- DATA LOADING & FEATURE ENGINEERING ---
 @st.cache_data
 def load_data():
-    path = 'data/Sample - Superstore.csv'
+    path = r"C:\Users\yashk\Downloads\Retail-Data-Analytics-Project-main\data\Sample - Superstore.csv"
     try:
         df = pd.read_csv(path, encoding='windows-1252')
         df['Order Date'] = pd.to_datetime(df['Order Date'])
